@@ -311,10 +311,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .container {
     max-width: 1536px;
   }
-}.fixed {
-  position: fixed;
-}.bottom-0 {
-  bottom: 0px;
 }.mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -325,18 +321,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2.5rem;
 }.mb-4 {
   margin-bottom: 1rem;
-}.mt-20 {
-  margin-top: 5rem;
-}.mt-4 {
-  margin-top: 1rem;
 }.mt-8 {
   margin-top: 2rem;
 }.mt-auto {
   margin-top: auto;
 }.inline-block {
   display: inline-block;
-}.flex {
-  display: flex;
+}.grid {
+  display: grid;
 }.hidden {
   display: none;
 }.h-8 {
@@ -345,8 +337,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 13rem;
 }.w-full {
   width: 100%;
-}.flex-col {
-  flex-direction: column;
+}.grid-rows-\[1fr_auto\] {
+  grid-template-rows: 1fr auto;
 }.space-y-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -387,13 +379,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}html,
+body {
+  height: 100%;
 }@media (min-width: 640px) {
 
   .sm\:mt-20 {
     margin-top: 5rem;
   }
 }
+
 /*# sourceMappingURL=index.61d3354a.css.map */
