@@ -6,7 +6,8 @@
     "copyjs": "cp ./src/*.js /dist",
     "start": "parcel src/index.html",
     "build": "parcel build --public-url=/not-wodle-just-my-contributions src/index.html",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "build-and-deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
     "axios": "^0.25.0",
