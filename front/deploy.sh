@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git checkout gh-pages
 cd ..
+git checkout gh-pages
 rm -rf docs
 cp -r front/dist docs
 # git add .
