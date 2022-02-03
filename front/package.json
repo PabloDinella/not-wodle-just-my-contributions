@@ -8,8 +8,10 @@
     "build": "parcel build"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "github-calendar-parser": "^1.2.1",
     "node-dev": "^7.1.0",
+    "node-fetch": "^3.2.0",
     "nodemon": "^2.0.15"
   },
   "devDependencies": {
