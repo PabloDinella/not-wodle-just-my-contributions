@@ -5,7 +5,10 @@ import parse from "github-calendar-parser";
 const GRID_SIZE = 5;
 
 export default async (request: VercelRequest, response: VercelResponse) => {
-  response.setHeader("Access-Control-Allow-Origin", "*");
+  response.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://pablodinella.github.io"
+  );
 
   const { username } = request.query;
 
