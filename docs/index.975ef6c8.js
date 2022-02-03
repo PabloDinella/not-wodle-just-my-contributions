@@ -520,6 +520,7 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"8lqZg":[function(require,module,exports) {
 console.log("👀");
+const API = "http://localhost:3000";
 const loadingIndicator = document.querySelector("#loading-indicator");
 const result = document.querySelector("#result");
 const resultingMatrix = document.querySelector("#resulting-matrix");
@@ -530,7 +531,7 @@ document.querySelector("form").addEventListener("submit", (event, data)=>{
     loadingIndicator.classList.remove("hidden");
     result.classList.add("hidden");
     error.classList.add("hidden");
-    fetch(`http://localhost:3000/api/github/${event.target.elements.username.value.replace("@", "")}`).then((response)=>response.json()
+    fetch(`${API}/api/github/${event.target.elements.username.value.replace("@", "")}`).then((response)=>response.json()
     ).then((matrix)=>{
         const htmlfiedMatrix = matrix.map((lines)=>lines.join("")
         ).join("<br />");
