@@ -4,13 +4,14 @@ const loadingIndicator = document.querySelector("#loading-indicator");
 const result = document.querySelector("#result");
 const resultingMatrix = document.querySelector("#resulting-matrix");
 const tweetButton = document.querySelector("#tweet-button");
+const error = document.querySelector("#error");
 
 document.querySelector("form").addEventListener("submit", (event, data) => {
-  console.log(event, data);
-
   event.preventDefault();
 
   loadingIndicator.classList.remove("hidden");
+  result.classList.add("hidden");
+  error.classList.add("hidden");
 
   fetch(
     `http://localhost:3000/api/github/${event.target.elements.username.value.replace(
@@ -44,5 +45,9 @@ document.querySelector("form").addEventListener("submit", (event, data) => {
       tweetButton.href = `https://twitter.com/intent/tweet?text=${encodeURI(
         tweetText
       )}`;
+    })
+    .catch(() => {
+      loadingIndicator.classList.add("hidden");
+      error.classList.remove("hidden");
     });
 });
