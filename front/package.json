@@ -5,7 +5,7 @@
     "copyhtml": "cp ./src/*.html /dist",
     "copyjs": "cp ./src/*.js /dist",
     "start": "parcel src/index.html",
-    "build": "parcel build"
+    "build": "parcel build --public-url=/not-wodle-just-my-contributions src/index.html"
   },
   "dependencies": {
     "axios": "^0.25.0",
