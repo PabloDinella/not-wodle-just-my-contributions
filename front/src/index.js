@@ -1,5 +1,10 @@
 console.log("👀");
 
+const API =
+  process.env.NODE_ENV === "production"
+    ? "https://not-wordle-just-my-contributions.vercel.app"
+    : "http://localhost:3000";
+
 const loadingIndicator = document.querySelector("#loading-indicator");
 const result = document.querySelector("#result");
 const resultingMatrix = document.querySelector("#resulting-matrix");
@@ -14,10 +19,7 @@ document.querySelector("form").addEventListener("submit", (event, data) => {
   error.classList.add("hidden");
 
   fetch(
-    `http://localhost:3000/api/github/${event.target.elements.username.value.replace(
-      "@",
-      ""
-    )}`
+    `${API}/api/github/${event.target.elements.username.value.replace("@", "")}`
   )
     .then((response) => response.json())
     .then((matrix) => {
