@@ -318,38 +318,35 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.mx-auto {
   margin-left: auto;
   margin-right: auto;
-}.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }.mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-}.mt-20 {
-  margin-top: 5rem;
 }.mb-10 {
   margin-bottom: 2.5rem;
-}.ml-2 {
-  margin-left: 0.5rem;
-}.mb-8 {
-  margin-bottom: 2rem;
-}.mb-2 {
-  margin-bottom: 0.5rem;
-}.mb-3 {
-  margin-bottom: 0.75rem;
 }.mb-4 {
   margin-bottom: 1rem;
+}.mt-20 {
+  margin-top: 5rem;
+}.mt-4 {
+  margin-top: 1rem;
+}.mt-8 {
+  margin-top: 2rem;
+}.mt-auto {
+  margin-top: auto;
 }.inline-block {
   display: inline-block;
+}.flex {
+  display: flex;
 }.hidden {
   display: none;
 }.h-8 {
   height: 2rem;
-}.h-20 {
-  height: 5rem;
 }.w-52 {
   width: 13rem;
 }.w-full {
   width: 100%;
+}.flex-col {
+  flex-direction: column;
 }.space-y-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -390,6 +387,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }@media (min-width: 640px) {
 
   .sm\:mt-20 {

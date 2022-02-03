@@ -539,15 +539,16 @@ document.querySelector("form").addEventListener("submit", (event, data)=>{
         ).join("\n");
         console.log("Your last contributions: ");
         console.log(stringifiedMatrix);
-        loadingIndicator.classList.add("hidden");
-        result.classList.remove("hidden");
         resultingMatrix.innerHTML = htmlfiedMatrix;
         const tweetText = [
             "Not Wordle, just my GitHub contributions",
             stringifiedMatrix,
-            "Make yours at: <url></url>", 
+            "Make yours at: https://pablodinella.github.io/not-wodle-just-my-contributions/", 
         ].join("\n\n");
         tweetButton.href = `https://twitter.com/intent/tweet?text=${encodeURI(tweetText)}`;
+        loadingIndicator.classList.add("hidden");
+        result.classList.remove("hidden");
+        tweetButton.focus();
     }).catch(()=>{
         loadingIndicator.classList.add("hidden");
         error.classList.remove("hidden");
